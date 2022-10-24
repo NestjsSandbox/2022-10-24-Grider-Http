@@ -1,0 +1,15 @@
+<div class="box">
+  <form (submit)="onFormSubmitEvent($event)">
+    <input
+    placeholder="Enter Search Term"
+    class="input"
+    (input)="searchTerm = $any($event.target).value" />
+  </form>
+</div>
+
+<!-- 
+    This here is an alternative way to send a value from 
+    the html-template to the component, it needs a function 
+    in the component to receive the value and use it.
+    <input (input)="onInput($any($event.target).value)" /> 
+-->
