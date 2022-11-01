@@ -13,8 +13,8 @@ export class AppComponent {
 
   onSearchTerm(appSearchTerm: string) {
     //Not good practice to use 'any'
-    this.wikipediaService.search(appSearchTerm).subscribe( (response: any) => {
-      this.foundPagesParent = response.query.search;
+    this.wikipediaService.search(appSearchTerm).subscribe( (page) => {
+      this.foundPagesParent = page;
     });
   }
 }
